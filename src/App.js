@@ -3,19 +3,24 @@ import Header from './comonents/Header';
 
 import CategoriasProvider from '../src/context/CategoriaContext'
 import Formulario from './comonents/Formulario';
+import EventosProvider from './context/EventosContext';
 
 
 function App() {
   return (
-    <CategoriasProvider>
-      <Header titulo="Evetos API"></Header>
+    
+    <EventosProvider>
+      <CategoriasProvider>
+        <Header titulo="Evetos API"></Header>
 
-      <div className="uk-container">
-          <Formulario/>
-      </div>
+        <div className="uk-container">
+            <Formulario/>
+        </div>
 
 
-    </CategoriasProvider>
+      </CategoriasProvider>
+    </EventosProvider>
+    
   )
 }
 
